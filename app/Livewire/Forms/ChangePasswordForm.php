@@ -24,6 +24,8 @@ class ChangePasswordForm extends Form
 
         // todo: Emit password changed event
 
+        session()->flash('message', 'Password Changed Successfully');
+
         $user->save();
     }
 }

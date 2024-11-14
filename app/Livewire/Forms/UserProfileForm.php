@@ -23,5 +23,7 @@ class UserProfileForm extends Form
         $user->email = $this->email;
 
         $user->save();
+
+        session()->flash('message', 'Your profile has been updated.');
     }
 }

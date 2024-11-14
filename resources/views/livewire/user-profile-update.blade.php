@@ -4,7 +4,7 @@
 
         @method('PUT')
 
-        <x-ui.errors/>
+        <x-ui.notifications/>
 
         <div class="box-body">
             <div class="form-group">
