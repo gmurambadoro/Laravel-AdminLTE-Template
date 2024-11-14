@@ -1,4 +1,4 @@
-# Laravel Docker Template
+# Laravel AdminLTE Template
 
 🚀 **Quickly set up your Laravel application with Docker!**
 
@@ -8,6 +8,7 @@ running without needing to install PHP locally.
 ## Features
 
 - Pre-configured Laravel 11 application
+- AdminLTE template preconfigured
 - Easy configuration through a customizable `docker.env` file.
 - Pre-defined scripts for building and connecting to your Docker containers.
 - Seamless integration with [phpMyAdmin](https://www.phpmyadmin.net/) for database management.
@@ -21,11 +22,11 @@ running without needing to install PHP locally.
 
     ```shell
     # Container name for the app service in docker-compose.yaml, must be unique for all containers running on your docker instance
-    DC_APP_NAME=Laravel11
+    DC_APP_NAME="Laravel-AdminLTE"
     # Forwarded port for the Laravel app service
-    DC_APP_PORT=8880
+    DC_APP_PORT=5180
     # Forwarded port for phpMyAdmin service to view the underlying application database
-    DC_PMA_PORT=8881
+    DC_PMA_PORT=5181
     # MySQL credentials - username
     MYSQL_USER=app_development
     # MySQL credentials - password
