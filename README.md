@@ -54,3 +54,12 @@ changes you make in this container are immediately visible in your IDE and vice 
 
 Happy coding! 🎉
 
+## Screenshots
+
+![Login](screenshot-login.png)
+
+![Login](screenshot-register.png)
+
+![Login](screenshot-forgot-password.png)
+
+![Login](screenshot-dashboard.png)
