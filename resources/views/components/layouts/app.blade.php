@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="{{ asset('dist/css/skins/_all-skins.min.css') }}">
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -59,7 +60,8 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                                <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle"
+                                                     alt="User Image">
                                             </div>
                                             <h4>
                                                 Support Team
@@ -113,7 +115,8 @@
                                                 <small class="pull-right">20%</small>
                                             </h3>
                                             <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar"
                                                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">20% Complete</span>
                                                 </div>
@@ -137,7 +140,8 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle"
+                                     alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -162,7 +166,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="{{ route('profile') }}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ route('sign-out') }}" class="btn btn-default btn-flat">Sign out</a>
@@ -273,7 +277,8 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.4.13
         </div>
-        <strong>Copyright &copy; {{ now()->format('Y') }} <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+        <strong>Copyright &copy; {{ now()->format('Y') }} <a href="https://adminlte.io">AdminLTE</a>.</strong> All
+        rights
         reserved.
     </footer>
 </div>
