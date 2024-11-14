@@ -44,5 +44,15 @@ services:
       PMA_USER: "${MYSQL_USER}" # must match the value of MYSQL_USER above
       PMA_PASSWORD: "${MYSQL_PASSWORD}" # must match the value of MYSQL_PASSWORD above
 
+  mailhog:
+    image: mailhog/mailhog
+    container_name: "${DC_APP_NAME}-mailhog"
+    restart: unless-stopped
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+#      - "1025:1025" # smtp server
+      - "${DC_MAILHOG_WEBUI_PORT}:8025" # web ui
+
 volumes:
   mysql_data: # the volume name used in db:volumes above
