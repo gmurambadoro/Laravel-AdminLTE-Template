@@ -1,11 +1,11 @@
 <x-layouts.guest>
     <x-slot:title>
-        Login
+        Forgot password
     </x-slot:title>
 
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Request a password reset</p>
 
-    <form action="{{ route('login.store') }}" method="post">
+    <form action="{{ route('password.update') }}" method="post">
         @csrf
 
         <x-auth.status/>
@@ -28,22 +28,24 @@
                 </span>
             @enderror
         </div>
-        <div class="row">
-            <div class="col-xs-8">
-                <div class="checkbox icheck">
-                    <label>
-                        <input type="checkbox" name="remember"> Remember Me
-                    </label>
-                </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-            </div>
-            <!-- /.col -->
+
+        <div class="form-group has-feedback @error('password_confirmation') has-error @enderror">
+            <input type="password" name="password_confirmation" class="form-control" placeholder="Retype password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            @error('password_confirmation')
+            <span class="help-block">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>
+
+        <input type="hidden" name="token" value="{{ request()->route('token') }}"/>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Confirm password reset</button>
         </div>
     </form>
 
-    <a href="{{ route('password.request') }}">I forgot my password</a><br>
+    <a href="{{ route('login') }}">Sign in to my account</a> <br/>
     <a href="{{ route('register') }}" class="text-center">Register a new account</a>
 </x-layouts.guest>

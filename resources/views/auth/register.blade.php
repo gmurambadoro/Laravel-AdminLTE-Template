@@ -3,10 +3,12 @@
         Register
     </x-slot:title>
 
-    <p class="login-box-msg">Register a new membership</p>
+    <p class="login-box-msg">Register a new account</p>
 
     <form action="{{ route('register.store') }}" method="post">
         @csrf
+
+        <x-auth.status/>
 
         <div class="form-group has-feedback @error('name') has-error @enderror">
             <input type="text" name="name" class="form-control" placeholder="Full name" value="{{ old('name') }}">

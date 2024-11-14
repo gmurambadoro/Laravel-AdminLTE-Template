@@ -8,11 +8,7 @@
     <form action="{{ route('password.email') }}" method="post">
         @csrf
 
-        @if (session('status'))
-            <div class="alert alert-info">
-                {{ session('status') }}
-            </div>
-        @endif
+        <x-auth.status/>
 
         <div class="form-group has-feedback @error('email') has-error @enderror">
             <input type="email" name="email" class="form-control" placeholder="Email address"
@@ -31,5 +27,5 @@
     </form>
 
     <a href="{{ route('login') }}">Login</a> <br/>
-    <a href="{{ route('register') }}" class="text-center">Register a new membership</a>
+    <a href="{{ route('register') }}" class="text-center">Register a new account</a>
 </x-layouts.guest>
