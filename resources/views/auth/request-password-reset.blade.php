@@ -22,10 +22,12 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Request password link</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                <i class="fa fa-send"></i> Reset password
+            </button>
         </div>
     </form>
 
-    <a href="{{ route('login') }}">Login</a> <br/>
+    <a href="{{ route('login') }}">Sign in</a> <em>- OR -</em>
     <a href="{{ route('register') }}" class="text-center">Register a new account</a>
 </x-layouts.guest>

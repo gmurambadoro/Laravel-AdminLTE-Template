@@ -51,11 +51,13 @@
             </div>
             <!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat">
+                    <i class="fa fa-user-plus"></i> Register
+                </button>
             </div>
             <!-- /.col -->
         </div>
     </form>
 
-    <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+    <a href="{{ route('login') }}" class="text-center">I already have an account</a>
 </x-layouts.guest>
