@@ -11,8 +11,11 @@ class ChangePasswordForm extends Form
     #[Validate('required|current_password')]
     public string $currentPassword = '';
 
-    #[Rule('required|min:5|max:255|confirmed')]
+    #[Rule('required|min:5|max:255|confirmed:passwordConfirmation')]
     public string $password = '';
+
+    #[Rule('required')]
+    public string $passwordConfirmation = '';
 
     public function save(): void
     {

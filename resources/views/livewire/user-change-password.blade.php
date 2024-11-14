@@ -12,7 +12,7 @@
 
                 <div class="col-sm-9">
                     <input type="password" class="form-control" id="currentPassword" wire:model="form.currentPassword"
-                           placeholder="Current Password"/>
+                           placeholder="Current Password" value="{{ old('currentPassword') }}"/>
 
                     @error('currentPassword')
                     <span class="help-block">{{ $message }}</span>
@@ -25,7 +25,7 @@
 
                 <div class="col-sm-9">
                     <input type="password" wire:model="form.password" class="form-control" id="password"
-                           placeholder="New Password"/>
+                           placeholder="New Password" value="{{ old('password') }}"/>
 
                     @error('password')
                     <span class="help-block">{{ $message }}</span>
@@ -34,10 +34,11 @@
             </div>
 
             <div class="form-group">
-                <label for="password_confirmation" class="col-sm-3 control-label">New Password</label>
+                <label for="password_confirmation" class="col-sm-3 control-label">Repeat Password</label>
 
                 <div class="col-sm-9">
-                    <input type="password" name="password_confirmation" class="form-control" id="password_confirmation"
+                    <input type="password" name="confirmPassword" wire:model="form.confirmPassword" class="form-control"
+                           id="password_confirmation"
                            placeholder="Repeat Password"/>
                 </div>
             </div>
