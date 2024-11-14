@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
-    Route::view('/', view('home'))->name('home');
+    Route::view('/', 'home')->name('home');
     Route::view('/profile', 'profile')->name('profile');
 });
 

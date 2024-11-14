@@ -4,12 +4,14 @@
 
         @method('PUT')
 
+        <x-ui.errors/>
+
         <div class="box-body">
             <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Name</label>
+                <label class="col-sm-2 control-label">Name</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" wire:model="form.name" placeholder="Name"
+                    <input type="text" class="form-control" wire:model="form.name" placeholder="Name"
                            value="{{ old('name', Auth::user()->name) }}"/>
 
                     @error('name')
@@ -19,7 +21,7 @@
             </div>
 
             <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
+                <label class="col-sm-2 control-label">Email</label>
 
                 <div class="col-sm-10">
                     <input type="email" wire:model="form.email" class="form-control" id="email" placeholder="Email"
