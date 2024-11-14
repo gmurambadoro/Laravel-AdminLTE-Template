@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="{{ asset('plugins/iCheck/square/blue.css') }}">
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ route('home') }}"><b>Admin</b>LTE</a>
+        <a href="{{ route('home') }}">{{ config('app.name') }}</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

@@ -9,9 +9,11 @@ running without needing to install PHP locally.
 
 - Pre-configured Laravel 11 application
 - AdminLTE template preconfigured
+- Authentication, Registration and Password reset functionality fully built in and configured.
 - Easy configuration through a customizable `docker.env` file.
 - Pre-defined scripts for building and connecting to your Docker containers.
 - Seamless integration with [phpMyAdmin](https://www.phpmyadmin.net/) for database management.
+- Seamless integration with [Mailhog](https://github.com/mailhog) for local mail development.
 
 ## Getting Started
 
@@ -27,6 +29,8 @@ running without needing to install PHP locally.
     DC_APP_PORT=5180
     # Forwarded port for phpMyAdmin service to view the underlying application database
     DC_PMA_PORT=5181
+    # Forwarded port for Mailhog WebUI
+    DC_MAILHOG_WEBUI_PORT=5125
     # MySQL credentials - username
     MYSQL_USER=app_development
     # MySQL credentials - password
