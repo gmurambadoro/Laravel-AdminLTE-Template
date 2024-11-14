@@ -135,7 +135,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <span class="hidden-xs">{{ Auth::user()->name ?? Auth::user()->email }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -144,8 +144,11 @@
                                      alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
+                                    {{ Auth::user()->name ?? Auth::user()->email }}
+
+                                    @if (Auth::user()->created_at)
+                                        <small>Member since {{ Auth::user()->created_at->format('d M, Y') }}</small>
+                                    @endif
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -191,7 +194,7 @@
                     <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>{{ Auth::user()->name ?? Auth::user()->email }}</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -256,7 +259,6 @@
         <section class="content-header">
             <h1>
                 {{ $title ?? 'Blank Page' }}
-                <small>it all starts here</small>
             </h1>
             <ol class="breadcrumb">
                 {{ $breadcrumbs ?? null }}
