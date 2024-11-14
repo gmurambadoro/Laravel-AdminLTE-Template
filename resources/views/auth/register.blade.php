@@ -8,17 +8,32 @@
     <form action="{{ route('register.store') }}" method="post">
         @csrf
 
-        <div class="form-group has-feedback">
-            <input type="text" name="name" class="form-control" placeholder="Full name">
+        <div class="form-group has-feedback @error('name') has-error @enderror">
+            <input type="text" name="name" class="form-control" placeholder="Full name" value="{{ old('name') }}">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            @error('name')
+            <span class="help-block">
+                    {{ $message }}
+                </span>
+            @enderror
         </div>
-        <div class="form-group has-feedback">
-            <input type="email" name="email" class="form-control" placeholder="Email">
+        <div class="form-group has-feedback @error('email') has-error @enderror">
+            <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            @error('email')
+            <span class="help-block">
+                    {{ $message }}
+                </span>
+            @enderror
         </div>
-        <div class="form-group has-feedback">
+        <div class="form-group has-feedback @error('password') has-error @enderror">
             <input type="password" name="password" class="form-control" placeholder="Password">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            @error('password')
+            <span class="help-block">
+                    {{ $message }}
+                </span>
+            @enderror
         </div>
         <div class="form-group has-feedback">
             <input type="password" name="password_confirmation" class="form-control" placeholder="Retype password">
@@ -28,7 +43,7 @@
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input type="checkbox"> I agree to the <a href="#">terms &amp; conditions</a>
+                        <input type="checkbox" required> I agree to the <a href="#">terms &amp; conditions</a>
                     </label>
                 </div>
             </div>
