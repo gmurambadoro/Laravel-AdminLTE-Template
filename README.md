@@ -46,7 +46,7 @@ running without needing to install PHP locally.
 
 ## Where to Next?
 
-Congratulations on getting to this point. When you run `./dcconnect.sh` you will be shown the two URLs that you may use
+Congratulations on getting to this point. When you run `./dkconnect.sh` you will be shown the two URLs that you may use
 to access the application and the database (via phpMyAdmin).
 
 Inside the container, you may run any `php` or `artisan` command as you build your application. Any
